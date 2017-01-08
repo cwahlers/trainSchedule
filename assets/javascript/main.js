@@ -9,11 +9,11 @@ var counter = 0;
 // Initialize Firebase
 //*****************************************
   var config = {
-    apiKey: "AIzaSyCoVyENiVQysImklhaGw0llOj20N76kdas",
-    authDomain: "sign-up-24a95.firebaseapp.com",
-    databaseURL: "https://sign-up-24a95.firebaseio.com",
-    storageBucket: "sign-up-24a95.appspot.com",
-    messagingSenderId: "56929048151"
+    apiKey: "AIzaSyC4Kl0IOagl4fdr2OIEy8hiFCVC2EdBgvY",
+    authDomain: "traintable-b55bd.firebaseapp.com",
+    databaseURL: "https://traintable-b55bd.firebaseio.com",
+    storageBucket: "traintable-b55bd.appspot.com",
+    messagingSenderId: "1016162485080"
   };
 
   firebase.initializeApp(config);
