@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <!-- <meta charset="UTF-8"> -->
+    <meta charset="UTF+e015">
+    <title>Master Train Timetable</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Link to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <!-- Local -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <br>  
+      <!-- Jumbotron -->
+      <div class="jumbotron" >
+        
+        <h1 class="text-center"><span class="glyphicons glyphicons-train" aria-hidden="true"></span> Train Time Table </h1>
+      </div>
+
+      <div class="row">
+
+        <!-- Train Schedule Panel -->
+        <div class="col-md-8">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Train Schedule</h3>
+            </div>
+
+            <table class="table table-hover" id='train-table'>
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Add Train Panel-->
+        <div class="col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Add Train</h3>
+            </div>
+            <div class="panel-body">
+            
+            <!-- New Train Form -->
+              <form role="form">
+                <div class="form-group">
+                  <label for="term-input">Train Name</label>
+                  <input class="form-control" id="train-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="records-input">Destination</label>
+                  <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="start-input">First Train Time (HH:mm - military time)</label>
+                  <input class="form-control" id="firstTrain-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="end-input">Frequency (minutes):</label>
+                  <input class="form-control" id="freq-input">
+                </div>
+                <button class="btn btn-primary" id="addTrain" type="sumbmit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="assets/javascript/main.js"></script>
+
+  </body>
+
+</html>
